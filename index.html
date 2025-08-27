@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>傩文化科普网</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <header class="hero-section" style="background-image: url('beijing.jpg')">
+</header>
+<style>
+        
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans SC', sans-serif;
+    background: url('beijing.jpg') no-repeat center center fixed;
+    background-size: cover; /* 让背景图自动缩放以填满整个容器 */
+    min-height: 100vh;      /* 确保背景图至少覆盖整个视口高度 */
+}
+ /* 导航栏样式 */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8) !important;
+            backdrop-filter: blur(5px);
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 40vh;
+            }
+        }
+        /* 引导语样式 */
+.intro-text {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.intro-text p {
+  line-height: 1.8;
+  text-align: justify;
+}
+.timeline-content h3 {
+  font-size: 23px; /* 标题文字大小 */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  font-size: 16px; /* 段落文字大小 */
+  margin-bottom: 15px;
+}
+
+
+      /* 时间轴整体样式 */
+.timeline {
+  position: relative;
+  padding-left: 50px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f5f5dc" opacity="0.3"/></svg>');
+  border-left: 3px solid #8b4513;
+}
+
+/* 时间轴节点容器 */
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  
+}
+
+/* 时间轴节点 */
+.timeline-dot {
+  position: absolute;
+  left: -10px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #cd853f, #8b4513);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(139, 69, 19, 0.5);
+  animation: pulse 2s infinite;
+}
+
+/* 节点装饰（印章效果） */
+.timeline-dot::before {
+  content: "傩";
+  position: absolute;
+  top: -15px;
+  left: -60px;
+  width: 50px;
+  height: 50px;
+  background: #8b0000;
+  color: #f5f5dc;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: '隶书', serif;
+  font-size: 20px;
+  transform: rotate(-15deg);
+  box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
+}
+
+/* 时间轴内容 */
+.timeline-content {
+  background: linear-gradient(135deg, #f5f5dc, #faf0e6);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #d2b48c;
+  font-family: '宋体', serif;
+  color: #333;
+}
+
+/* 图片样式 */
+.timeline-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 3px solid #8b4513;
+}
+
+/* 动画效果 */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(139, 69, 19, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(139, 69, 19, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(139, 69, 19, 0.5);
+  }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 40px;
+  }
+  .timeline-dot {
+    left: -15px;
+  }
+}
+
+</style></head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-theater-masks me-2"></i>
+                <span class="fw-bold">傩文化科普网</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#history">历史沿革</a></li>
+                    <li class="nav-item"><a class="nav-link" href="masks.html">傩面具</a></li>
+                    <li class="nav-item"><a class="nav-link" href="distribution.html">地区分布</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部横幅 -->
+    <header class="hero-section" style="background-image: url('your-image.jpg'); background-size: cover; background-position: center;">
+        <div class="overlay"></div>
+        <div class="container h-100 d-flex flex-column justify-content-center text-white text-center">
+            <h1 class="display-4 fw-bold mb-3 text-black" style="font-family: 'ZCOOL XiaoWei', serif;margin-top: 10px;">
+                探索神秘的傩文化世界
+            </h1>
+            <p class="lead text-black" style="font-family: 'ZCOOL XiaoWei', serif;font-size: 22px;">传承千年非遗，解码傩的文化密码</p>
+            <a href="#history" class="btn btn-warning btn-lg mt-3">开始探索</a>
+        </div>
+    </header>
+  <!-- 历史沿革部分 -->
+<section id="history" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 text-black" style="font-family: 'ZCOOL XiaoWei', serif; font-weight: 700; font-size: 42px;">傩文化的历史沿革</h2>
+    
+    <!-- 新增引导语 -->
+    <div class="intro-text text-center mb-5">
+      <p class="lead" style="font-family: 'Ma Shan Zheng', cursive; font-size: 25px; color: #5d4037;">
+        傩文化是中国传统文化中极为古老而独特的一支，它起源于原始社会的宗教祭祀活动，历经数千年演变，从单纯的驱鬼逐疫仪式，逐渐发展为融合宗教、艺术、民俗、戏剧等多种元素的综合性文化体系。以下将按照历史脉络，详细梳理傩文化的起源、发展、演变及其当代价值。
+    </div>
+
+    <!-- 时间轴部分 -->
+    <div class="timeline">
+      <!-- 时间节点 1 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>一、远古起源：巫术与祭祀的萌芽</h3>
+          <p>1. 起源背景
+傩文化的起源可追溯至新石器时代晚期，当时人们对自然界的认识有限，对疾病、灾难、死亡等现象充满恐惧，认为这些现象由恶鬼、邪神引起。因此，古人通过特定的仪式，试图驱逐这些看不见的威胁，以祈求平安与丰收。</p>
+<p>2. 商周时期的初步形成
+进入商周时期，傩文化逐渐成形，成为一种制度化的宗教仪式。周朝的“傩仪”被纳入国家礼制，成为“国之大事”之一。根据《周礼·夏官》记载，傩仪由“方相氏”主持，他佩戴“黄金四目”的面具，穿着玄衣朱裳，手持戈盾，率领百官逐室驱疫。
+这一时期的傩仪具有强烈的巫术色彩，面具、舞蹈、咒语、驱赶动作等元素已初具雏形，奠定了傩文化的基本形态。</p>
+        </div>
+      </div>
+
+      <!-- 时间节点 2 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>二、汉唐时期：宫廷傩仪的鼎盛与制度完善</h3>
+         <p>1. 汉代：国家化的傩礼
+汉代是中国傩文化发展的重要阶段，傩仪被正式纳入国家礼制体系，成为宫廷岁末年初的重要活动。根据《后汉书·礼仪志》记载，每年腊月举行“大傩之礼”，由中黄门子弟扮演“侲子”，方相氏率领众人，在宫中各处击鼓呼喊，驱逐疫鬼。
+这一时期的傩仪规模宏大，参与人数众多，具有极强的仪式感和戏剧性。傩仪不仅用于驱鬼，还成为巩固皇权、彰显礼制的重要手段。</p>
+         <p>2. 魏晋南北朝：多元文化的融合
+魏晋南北朝时期，社会动荡，佛教、道教等宗教兴起，傩文化开始与这些宗教相互影响。佛教中的“地狱”“鬼神”观念融入傩仪，丰富了傩的鬼神体系；道教则强化了傩的符咒、法术元素，使傩仪更具神秘色彩。</p>
+<p>3. 唐代：艺术化倾向显现
+唐代是中国古代文化的鼎盛时期，傩仪在保持宗教功能的同时，逐渐表现出艺术化的倾向。傩舞、傩戏开始从单纯的仪式中分化出来，成为独立的表演形式。唐代诗人杜甫、白居易等作品中，均有对傩仪的描写，反映了当时傩文化在社会生活中的重要地位。</p>
+
+        </div>
+      </div>
+
+      <!-- 时间节点 3 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>三、宋元明清：傩戏的兴起与地域化发展</h3>
+          <p>1. 宋代：从仪式到戏剧的转变
+宋代是傩文化发展的转折点。随着市民阶层的兴起和戏曲艺术的发展，傩仪逐渐从宫廷走向民间，从宗教仪式转变为娱乐性更强的傩戏。傩戏开始融合说唱、杂技、歌舞等多种艺术形式，情节更加丰富，角色更加多样。
+这一时期，傩面具的制作工艺也达到高峰，面具不仅用于驱鬼，还成为戏曲表演的重要道具，具有极高的艺术价值。</p>
+<p>>2. 元明清：地域流派的形成
+元明清时期，傩文化在全国范围内广泛传播，并与地方文化相结合，形成了各具特色的傩戏流派。例如：
+江西南丰傩舞：以面具舞蹈为主，动作粗犷有力，节奏感强；
+安徽池州傩戏：融合了徽剧元素，唱腔优美，情节曲折；
+贵州德江傩堂戏：保留了浓厚的宗教色彩，仪式性强，面具种类繁多；
+湖南湘西傩戏：与土家族、苗族文化结合，具有鲜明的民族特色。
+这些地域流派不仅丰富了傩文化的内涵，也使其成为中国传统戏剧的重要组成部分。</p>
+        </div>
+      </div>
+      <!-- 时间节点 4 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>四、近现代：传承危机与非遗保护</h3>
+          <p>1. 濒危与边缘化
+进入近现代，随着社会的现代化进程，傩文化一度面临严重的传承危机。一方面，传统信仰的弱化使傩仪的宗教功能逐渐丧失；另一方面，现代娱乐方式的普及使傩戏的观众群体不断萎缩。许多地方的傩戏传承出现断层，部分技艺濒临失传。</p>
+<p>2. 非遗保护与文化复兴
+20世纪末以来，随着国家对非物质文化遗产的重视，傩文化重新受到关注。2006年，傩戏被列入第一批国家级非物质文化遗产名录，各地政府和文化机构开始采取措施保护和传承傩文化。
+例如，江西南丰、贵州德江等地建立了傩文化博物馆，举办傩戏展演和面具制作培训班；一些高校和研究机构也开展了傩文化的学术研究，出版了大量专著和论文。
+</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 云傩语宙</p>
+            <p class="small">致力于保护和传承中华优秀传统文化</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
