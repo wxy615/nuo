@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>傩文化科普网</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <header class="hero-section" style="background-image: url('beijing.jpg')">
+</header>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans SC', sans-serif;
+    background: url('beijing.jpg') no-repeat center center fixed;
+    background-size: cover; /* 这是关键！让背景图自动缩放以填满整个容器 */
+    min-height: 100vh;      /* 确保背景图至少覆盖整个视口高度 */
+}
+html, body {
+    height: 100%; /* 确保 html 和 body 占满整个视口高度 */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Noto Sans SC', sans-serif;
+    background: url('beijing.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+main {
+    flex: 1; /* 让主要内容区域自动扩展，占满剩余空间 */
+}
+
+footer {
+    flex-shrink: 0; /* 防止页脚被压缩 */
+}
+/* 卡片样式 */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img {
+    height: 220px; /* 统一图片高度 */
+    object-fit: cover; /* 保持图片比例 */
+}
+
+.card-body {
+    padding: 1.5rem !important; /* 增加内边距 */
+}
+
+.card-title {
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    font-family: 'ZCOOL XiaoWei', serif;
+    line-height: 1.7;
+    color: #555;
+}
+
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-theater-masks me-2"></i>
+                <span class="fw-bold">傩文化科普网</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#history">历史沿革</a></li>
+                    <li class="nav-item"><a class="nav-link" href="masks.html">傩面具</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="distribution.html">地区分布</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 地区分布部分 -->
+<main>
+  <section id="distribution" class="py-5" style="background-image: url('assets/images/your-bg.jpg'); background-size: cover; background-position: center;">
+    <div class="container">
+      <!-- 地区 1：江西南丰 -->
+      <div class="card mb-4 border-0 shadow-sm">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="jx.jpg" 
+                 class="img-fluid rounded-start h-100 object-fit-cover" 
+                 alt="江西南丰傩舞">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body" style="background-color: #faf0e6;">
+              <h5 class="card-title">江西南丰傩面具</h5>
+              <p class="card-text">造型特点:
+南丰傩面具以夸张、生动的造型著称，面部特征突出，眼睛圆睁，嘴巴大张，表情或威严或诙谐。面具种类繁多，包括神灵、鬼怪、历史人物、世俗角色等，每种角色都有其独特的造型规范。<br>
+制作工艺:<br>
+选材：多选用樟木、杨木等轻质木材，因其纹理细腻、不易开裂。<br>
+雕刻：采用浮雕技法，先勾勒轮廓，再精细雕刻五官和装饰纹样。<br>
+上色：使用天然矿物颜料，色彩鲜艳且持久。红色代表忠勇，黄色象征神圣，黑色表示刚正，白色常用于鬼怪形象。<br>
+装饰：部分面具会附加毛发、布料或金属装饰，增强视觉效果。<br>
+文化背景:
+南丰傩面具与当地的傩戏表演紧密相连，主要用于驱鬼逐疫、祈福纳祥的仪式。面具不仅是表演道具，更是神灵的化身，具有神圣的宗教意义。
+<br>
+使用场景:
+多在春节期间的傩戏表演中使用，表演者佩戴面具，配合锣鼓音乐，进行请神、驱邪、送神等仪式。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 地区 2：湖南新化 -->
+      <div class="card mb-4 border-0 shadow-sm">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="hn.jpg" 
+                 class="img-fluid rounded-start h-100 object-fit-cover" 
+                 alt="湖南新化傩戏">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body" style="background-color: #faf0e6;">
+              <h5 class="card-title">湖南新化傩面具</h5>
+              <p class="card-text">造型特点:
+湖南湘西傩面具造型独特，融合了汉族和少数民族（如苗族、土家族）的艺术风格。面具面部表情丰富，既有威严的神灵形象，也有诙谐的世俗角色。眼睛、嘴巴等部位常采用夸张手法，增强戏剧效果。
+<br>
+制作工艺:<br>
+选材：多选用樟木、杨木等轻质木材，便于佩戴和表演。<br>
+雕刻：采用精细的浮雕技法，注重五官的刻画和装饰纹样的细节处理。<br>
+上色：色彩对比强烈，常用红、绿、蓝、黄等鲜艳颜色，象征不同的性格和身份。<br>
+装饰：部分面具会附加羽毛、银饰或布料装饰，体现少数民族的审美特色。<br>
+文化背景:
+湘西傩面具与当地的傩戏、傩舞表演紧密相连，既有宗教仪式功能，也有娱乐表演性质。面具不仅是驱邪祈福的工具，也是民间艺术的重要载体，反映了当地人民的信仰和生活习俗。
+<br>
+使用场景:
+多在春节、庙会或重要节庆期间使用，表演者佩戴面具，进行歌舞、戏剧表演，表达对神灵的敬畏和对美好生活的向往。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 地区 3：安徽贵池 -->
+      <div class="card mb-4 border-0 shadow-sm">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="安徽.jpg" 
+                 class="img-fluid rounded-start h-100 object-fit-cover" 
+                 alt="安徽贵池傩戏">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body" style="background-color:  #faf0e6;">
+              <h5 class="card-title">安徽贵池傩面具</h5>
+              <p class="card-text">造型特点：
+安徽贵池傩面具造型古朴庄重，线条简洁有力，面部表情严肃，眼神深邃。面具多为神灵、祖先或历史人物形象，给人一种威严不可侵犯的感觉。整体风格较为写实，少有夸张变形。
+<br>
+制作工艺:<br>
+选材：多选用樟木、榆木等硬质木材，确保面具的耐用性。<br>
+雕刻：采用传统的浮雕技法，注重面部结构的准确性和比例的协调性。<br>
+上色：色彩以红、黑、金为主，象征权威、神圣和富贵。部分面具还会绘制符咒或吉祥图案，增强宗教意味。<br>
+装饰：部分面具会镶嵌金属片或绘制精细纹样，提升视觉效果。<br>
+文化背景:
+贵池傩面具与当地的傩戏、傩祭活动密切相关，主要用于祭祀祖先、驱邪祈福的仪式。面具被视为神灵或祖先的化身，具有极高的宗教地位和文化价值。<br>
+使用场景:
+多在农历新年、庙会或重要祭祀活动中使用，表演者佩戴面具，配合锣鼓音乐，进行请神、驱邪、送神等仪式性表演。
+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- 地区 4：贵州 -->
+      <div class="card mb-4 border-0 shadow-sm">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="gz(1).jpg" 
+                 class="img-fluid rounded-start h-100 object-fit-cover" 
+                 alt="贵州">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body" style="background-color: #faf0e6;">
+              <h5 class="card-title">贵州德江傩面具</h5>
+              <p class="card-text">造型特点:
+贵州德江傩面具造型粗犷豪放，线条简练有力，面部表情夸张，多为神灵、鬼怪或祖先形象。面具通常具有大眼睛、高鼻梁、大嘴巴等特征，给人一种神秘而威严的感觉。部分面具还融入了少数民族的审美特点，造型更加多样化。
+<br>
+制作工艺:<br>
+选材：多选用当地常见的木材，如樟木、杉木等，质地坚硬且易于雕刻。<br>
+雕刻：采用粗犷的雕刻手法，注重整体轮廓的塑造，细节部分相对简化，强调力量感和神秘感。<br>
+上色：使用天然植物和矿物颜料，色彩以红、黑、黄为主，象征力量、神秘和神圣。<br>
+装饰：部分面具会附加兽皮、羽毛或布料装饰，增强原始感和仪式感。<br>
+文化背景:
+贵州傩面具与当地的傩戏、傩祭活动密切相关，主要用于驱鬼逐疫、祈福纳祥的宗教仪式。面具被视为神灵的化身，佩戴面具的表演者被认为具有通神的能力，能够与神灵沟通，保佑村寨平安。
+<br>
+使用场景：
+多在农历新年、重要节日或村寨祭祀活动中使用，表演者佩戴面具，配合锣鼓、唢呐等乐器，进行请神、驱邪、送神等仪式性表演。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 云傩语宙</p>
+            <p class="small">致力于保护和传承中华优秀传统文化</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

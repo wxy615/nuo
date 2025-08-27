@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>傩文化科普网</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <header class="hero-section" style="background-image: url('beijing.jpg')">
+</header>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans SC', sans-serif;
+    background: url('beijing.jpg') no-repeat center center fixed;
+    background-size: cover; /* 这是关键！让背景图自动缩放以填满整个容器 */
+    min-height: 100vh;      /* 确保背景图至少覆盖整个视口高度 */
+}
+
+/* 卡片基础样式 */
+.card {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #d2b48c;
+    height: 100%; /* 确保卡片填满父容器高度 */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 卡片图片容器 */
+.mask-card {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* 设置4:3的宽高比 */
+    overflow: hidden;
+}
+
+/* 面具卡片图片 */
+.mask-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持比例并裁剪多余部分 */
+    object-position: center; /* 图片居中显示 */
+    transition: transform 0.5s;
+}
+
+/* 卡片悬停效果 */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mask-card:hover img {
+    transform: scale(1.05);
+}
+
+/* 卡片内容区域 */
+.card-body {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 卡片标题 */
+.card-title {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+html, body {
+    height: 100%; /* 确保 html 和 body 占满整个视口高度 */
+    margin: 0;
+    padding: 0;
+}
+
+
+main {
+    flex: 1; /* 让主要内容区域自动扩展，占满剩余空间 */
+}
+
+footer {
+    flex-shrink: 0; /* 防止页脚被压缩 */
+}
+
+ </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-theater-masks me-2"></i>
+                <span class="fw-bold">傩文化科普网</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#history">历史沿革</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="mask.html">傩面具</a></li>
+                    <li class="nav-item"><a class="nav-link" href="distribution.html">地区分布</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<main>
+        <section id="masks" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5" style="font-family: 'ZCOOL XiaoWei', serif; font-weight: 700; font-size: 42px;">傩面具：文化的活化石</h2>
+    
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="masks-container">
+      <!-- 面具卡片将通过JavaScript动态生成 -->
+    </div>
+    
+    <div class="text-center mt-5">
+      <button id="show-more-masks" class="btn btn-outline-primary btn-lg">查看更多面具</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // 面具数据数组
+    const masksData = [
+      { name: '周瑜', image: '2.jpg' },
+      { name: '华雄', image: '1.jpg' },
+      { name: '韩忠', image: 'hz.jpg' },
+      { name: '曹操', image: 'cc.jpg' },
+      { name: '关公', image: 'gy.jpg' },
+      { name: '刘备', image: 'lb.jpg' },
+      { name: '孙策', image: 'sc.jpg', hidden: true },
+      { name: '夏侯惇', image: 'xhc.jpg', hidden: true },
+      { name: '张飞', image: 'zf1.jpg', hidden: true },
+       { name: '搜除大仙', image: '搜除大仙.jpg', hidden: true },
+      { name: '玉女', image: '玉女.jpg', hidden: true },
+      { name: '女娲', image: '女娲.jpg', hidden: true },
+     { name: '观音', image: '观音.jpg', hidden: true },
+      { name: '龙王', image: '龙王.jpg', hidden: true },
+      { name: '如来', image: '如来.jpg', hidden: true },
+     { name: '钟馗', image: '钟馗.jpg', hidden: true },
+      { name: '纸钱', image: '纸钱.jpg', hidden: true },
+      { name: '开山', image: '开山.jpg', hidden: true },
+     { name: '李斯（江西婺源）', image: '李斯.jpg', hidden: true },
+      { name: '绿面神（福建邵武）', image: '绿面神.jpg', hidden: true },
+      { name: '马神（湖南泸溪）', image: '马神.jpg', hidden: true },
+    { name: '小鬼（湖南武冈）', image: '小鬼.jpg', hidden: true },
+     { name: '郎君（湖南新宁）', image: '郎君.jpg', hidden: true },
+      { name: '老虎', image: '老虎.jpg', hidden: true },
+      { name: '萨满面具', image: '萨满面具.jpg', hidden: true },
+    { name: '东巴（云南・納西族）', image: '东巴.jpg', hidden: true },
+      { name: '丫鬟（貴州荔波・布依族）', image: '丫鬟.jpg', hidden: true },
+      { name: '万岁婆王（环江・毛南族）', image: '万岁婆王.jpg', hidden: true },
+    ];
+
+    // 动态生成面具卡片
+    function generateMasks() {
+      const container = document.getElementById('masks-container');
+      
+      masksData.forEach((mask, index) => {
+        const col = document.createElement('div');
+        col.className = 'col mask-item';
+        
+        // 如果标记为隐藏，添加hidden类
+        if (mask.hidden) {
+          col.classList.add('hidden');
+          col.style.display = 'none';
+        }
+        
+        col.innerHTML = `
+          <div class="card border-0 shadow-sm text-center h-100" style="background-color: #f5f5dc;">
+            <img src="${mask.image}" class="card-img-top" alt="${mask.name}">
+            <div class="card-body p-2">
+              <h5 class="card-title mb-0">${mask.name}</h5>
+            </div>
+          </div>
+        `;
+        
+        container.appendChild(col);
+      });
+    }
+
+    // 初始化页面时生成面具
+    generateMasks();
+
+    // 显示更多面具的按钮事件
+    const showMoreButton = document.getElementById('show-more-masks');
+    const hiddenMasks = document.querySelectorAll('.mask-item[style="display: none;"]');
+    
+    showMoreButton.addEventListener('click', function() {
+      // 显示所有隐藏的面具
+      hiddenMasks.forEach(mask => {
+        mask.style.display = 'block';
+      });
+      
+      // 隐藏或更改按钮文本
+      showMoreButton.textContent = '已显示全部面具';
+      showMoreButton.disabled = true;
+    });
+  });
+</script>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 云傩语宙</p>
+            <p class="small">致力于保护和传承中华优秀传统文化</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
